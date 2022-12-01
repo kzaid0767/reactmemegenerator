@@ -1,0 +1,31 @@
+nav{
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem;
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+}
+
+.meme-face{
+    width: 2rem;
+    
+}
+
+.nav-title{
+    font-weight: 700;
+    font-size: 1.3125rem;
+    line-height: 1.5;
+    margin-left: 0.5rem;
+}
+
+.nav-right{
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 0.9375;
+}
