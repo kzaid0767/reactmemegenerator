@@ -1,12 +1,21 @@
 import './Meme.css'
-import memesData from './data'
 
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 function Meme() {
 
-    const [meme, setMeme] = useState({topText:'',bottomText:'', randomImage:'http://i.imgflip.com/1bij.jpg'})
-    const [allData, setAllData]= useState(memesData)
+    const [meme, setMeme] = useState({topText:'',bottomText:'', randomImage:'https://i.imgflip.com/24y43o.jpg'})
+    const [allData, setAllData]= useState({})
+
+    /* useEffect brings data and updated state after first render 
+    depencies array [] coz data in state is set only once*/
+
+    useEffect(()=>{fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => {
+                setAllData(data)
+            })},[]
+    )
 
     let pic = `${meme.randomImage}`
     function handleClick(e){
